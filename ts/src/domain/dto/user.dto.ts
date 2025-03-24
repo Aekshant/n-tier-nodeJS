@@ -1,8 +1,9 @@
 
 
 export interface UserDTO {
-    id?: string;
+    id?: number;
     name: string;
     email: string;
-    age: number;
+    createdAt?: Date;
+    updatedAt?: Date;
 }

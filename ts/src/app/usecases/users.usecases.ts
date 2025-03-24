@@ -8,15 +8,19 @@ export class Users {
     return await this.userRepo.create(user);
   }
 
-  async getUserById(id: string) {
-    return await this.userRepo.getById(id);
+  async getAllUser() {
+    return await this.userRepo.getAll();
   }
 
-  async updateUser(id: string, data: Partial<UserDTO>) {
+  async getUserById(id: number) {
+    return await this.userRepo.getUserById(id);
+  }
+
+  async updateUser(id: number, data: Partial<UserDTO>) {
     return await this.userRepo.update(id, data);
   }
 
-  async deleteUser(id: string) {
+  async deleteUser(id: number) {
     return await this.userRepo.delete(id);
   }
 }
